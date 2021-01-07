@@ -1,9 +1,11 @@
+# Import libraries
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
-d%matplotlib inline
+%matplotlib inline
 from itertools import chain
 
+# Initial Conditions
 alpha_A = 1.0564*(10**-7) #  AHL production rate
 alpha = 1.0564 * (10**-7)
 alpha_R = 1.0 # Production of PpuR
@@ -52,7 +54,7 @@ y_th = 3.597 * (10**-12) #Critical threshold for positive-feedback in y
 
 #spanish_gamma = (pi_1_plus*alpha_R)/(pi_minus*gamma_R)
 
-p = [alpha_A, beta_A, n, gamma_A, gamma_R, pi_1_plus, pi_minus, C_th, alpha_R]
+p = [alpha_A, beta_A, n, gamma_A, gamma_R, pi_1_plus, pi_minus, C_th, alpha_R] # Packaged Initial Conditions for ode-solver
 
 # ODE solver parameters
 abserr = 1.0e-8
@@ -60,8 +62,9 @@ relerr = 1.0e-6
 stoptime = 10.0
 numpoints = 2500
 
-t = [stoptime * float(i) / (numpoints - 1) for i in range(numpoints)] # How long the graph will be
+t = [stoptime * float(i) / (numpoints - 1) for i in range(numpoints)] # Simulation keyframes (time in hrs)
 
+# Single Cell Model, uses ordinary differential equations to model production
 def single_cell_model(w0,t,p, q): # Initial Values of Functions user gives
   x_0, R_0, C_0 = w0
   
