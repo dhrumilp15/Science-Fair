@@ -5,7 +5,7 @@ A novel genetic circuit design was modelled to emulate resistor units to be used
 ![2018 Results](2018/results.png)
 
 ## 2021
-- :tada: Update! This project is a candidate for 2021 Team Canada-ISEF :tada:! I've extended this project to better model the behaviour of the synthetic minimal cells with a system of delay differential equations and using more experimental data to refine the model!
+- :tada: Update! This project is a candidate for 2021 Team Canada-ISEF! :tada: I've extended this project to better model the behaviour of the synthetic minimal cells with a system of delay differential equations and using more experimental data to refine the model!
 
 The easiest way to run the code is on [Google Colab](https://colab.research.google.com/drive/1q7E10piQMLz7Oe-3c2QRlnTh4rOu2PYo?usp=sharing). Feel free to comment or suggest edits!
 
